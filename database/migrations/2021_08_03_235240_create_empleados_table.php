@@ -19,8 +19,10 @@ class CreateEmpleadosTable extends Migration
             $table->string('apellidos');
             $table->string('direccion');
             $table->string('localidad');
-            $table->foreignId('documentos_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('provincias_id')->constrained()->cascadeOnDelete();
+            $table->string('no_documento');
+            $table->string('codigo_postal');
+            $table->foreignId('documento_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('provincia_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

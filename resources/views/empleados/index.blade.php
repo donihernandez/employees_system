@@ -29,7 +29,7 @@
                                 <td>{{ $empleado->localidad }}</td>
                                 <td>
                                     <form action="{{ route('empleados.destroy',$empleado->id) }}" method="POST">
-                                        <a class="btn btn-info" href="{{ route('empleados.show',$empleado->id) }}">Ver</a>
+                                        <a class="btn btn-primary" href="{{ route('empleados.show',$empleado->id) }}">Ver</a>
                                         <a class="btn btn-success" href="{{ route('empleados.edit',$empleado->id) }}">Editar</a>
                                         @csrf
                                         @method('DELETE')
